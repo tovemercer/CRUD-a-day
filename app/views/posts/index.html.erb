@@ -6,3 +6,5 @@
     <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
   </div>
 <% end %>
+
+<p class="new-post"><%= link_to "create new post", new_post_path %></p>

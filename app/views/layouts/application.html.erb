@@ -5,10 +5,29 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  'application', "https://fonts.googleapis.com/css?family=Source+Sans+Pro" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="center">
+    <header>
+      <nav class="header-footer">
+        <ul>
+          <% if logged_in? %>
+            <div id="header">
+              <li><%= link_to "home", root_path %></li>
+              <li><%= link_to "logout", root_path %></li>
+            </div>
+          <% else %>
+            <div id="header">
+              <li><%= link_to "home", root_path %></li>
+              <li><%= link_to "login", root_path %></li>
+              <li><%= link_to "register", root_path %></li>
+            </div>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
