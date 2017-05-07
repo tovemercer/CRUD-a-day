@@ -1,0 +1,7 @@
+<div class="post-show">
+  <h2 class="title"><%= @post.title %></h2>
+
+  <p class="date">Created <%= time_ago_in_words(@post.created_at) %> </p>
+
+  <p class="body"><%= @post.body %></p>
+</div>
