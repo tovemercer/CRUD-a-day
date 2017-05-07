@@ -13,18 +13,9 @@
     <header>
       <nav class="header-footer">
         <ul>
-          <% if logged_in? %>
-            <div id="header">
-              <li><%= link_to "home", root_path %></li>
-              <li><%= link_to "logout", root_path %></li>
-            </div>
-          <% else %>
-            <div id="header">
-              <li><%= link_to "home", root_path %></li>
-              <li><%= link_to "login", root_path %></li>
-              <li><%= link_to "register", root_path %></li>
-            </div>
-          <% end %>
+          <div id="header">
+            <li><%= link_to "home", root_path %></li>
+          </div>
         </ul>
       </nav>
     </header>

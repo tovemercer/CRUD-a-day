@@ -1,6 +1,13 @@
 <h2>New Post</h2>
 
 <%= form_for :post, url: posts_path do |f| %>
+
+  <% if @post.errors.any? %>
+    <% @post.errors.each do |error| %>
+      <p>ERROR: <%= error.capitalize %> cannot be blank</p>
+    <% end %>
+  <% end %>
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
